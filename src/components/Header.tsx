@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <HStack w="100%" justify="space-between" py="10px" px="20px">
       <Link href="/">
-        <Image src="/images/Boki.png" alt="logo" />
+        <Image src="/images/Boki.png" alt="logo" w={{base: "120px", md: "160px"}} />
       </Link>
       <Button bg="transparent" borderWidth="1px" borderColor="white" color="white" borderRadius="0" _hover={{ bg: "white", color: "black"}}>WALLET CONNECT</Button>
     </HStack>
