@@ -20,7 +20,7 @@ export default function Mint() {
         mt="22px"
         mb="15px"
       >
-        NOTE: ONLY Boki holders are eligible up to 10 pets mints per wallet.
+        NOTE: ONLY Boki holders are eligible up to 1 pet per Boki.
       </Text>
       <HStack>
         <HStack borderWidth="1px" borderColor="main" w="160px" h="44px" justify="center">
