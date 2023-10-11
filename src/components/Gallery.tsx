@@ -61,7 +61,7 @@ export default function Gallery() {
           prevEl: prevRef.current!, // Assert non-null
           nextEl: nextRef.current!, // Assert non-null
         }}
-        onInit={(swiper) => {
+        onSwiper={(swiper) => {
           console.log('🚀 ~ file: Gallery.tsx:60 ~ Gallery ~ swiper:', swiper);
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
@@ -71,6 +71,8 @@ export default function Gallery() {
           // @ts-ignore
           // eslint-disable-next-line no-param-reassign
           swiper.params.navigation.nextEl = nextRef.current;
+          // Re-init navigation
+          swiper.navigation.destroy();
           swiper.navigation.init();
           swiper.navigation.update();
         }}
@@ -84,11 +86,12 @@ export default function Gallery() {
         ))}
       </Swiper>
       <Box
-        sx={{ width: '40px', height: '40px', cursor: 'pointer' }}
+        sx={{ width: '40px', height: '40px' }}
         position="absolute"
         zIndex="9"
         right={{ base: '20px', xl: '-20px' }}
         ref={nextRef}
+        cursor="pointer"
       >
         <Image w="40px" h="40px" src="/images/right.png" alt="right arrow" />
       </Box>
