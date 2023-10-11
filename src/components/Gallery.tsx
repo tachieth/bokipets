@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box, HStack, Image } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { NavigationOptions } from 'swiper/types';
 import 'swiper/css';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { useRef } from 'react';
@@ -61,20 +62,11 @@ export default function Gallery() {
           prevEl: prevRef.current!, // Assert non-null
           nextEl: nextRef.current!, // Assert non-null
         }}
-        onSwiper={(swiper) => {
+        onBeforeInit={(swiper) => {
           console.log('🚀 ~ file: Gallery.tsx:60 ~ Gallery ~ swiper:', swiper);
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          // eslint-disable-next-line no-param-reassign
-          swiper.params.navigation.prevEl = prevRef.current;
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          // eslint-disable-next-line no-param-reassign
-          swiper.params.navigation.nextEl = nextRef.current;
-          // Re-init navigation
-          swiper.navigation.destroy();
-          swiper.navigation.init();
-          swiper.navigation.update();
+          const navigation = swiper.params.navigation as NavigationOptions;
+          navigation.prevEl = prevRef.current;
+          navigation.nextEl = nextRef.current;
         }}
         modules={[Navigation, Autoplay]}
         breakpoints={breakpoints}
