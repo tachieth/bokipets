@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box, HStack, Image } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { NavigationOptions } from 'swiper/types';
+import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import { Autoplay, Navigation } from 'swiper/modules';
 import { useRef } from 'react';
@@ -30,8 +30,7 @@ const breakpoints = {
 };
 
 export default function Gallery() {
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
+ const swiperRef = useRef<SwiperType>();
 
   return (
     <HStack
@@ -46,7 +45,7 @@ export default function Gallery() {
         sx={{ width: '40px', height: '40px' }}
         position="absolute"
         zIndex="9"
-        ref={prevRef}
+        onClick={() => swiperRef.current?.slidePrev()}
         cursor="pointer"
         left={{ base: '20px', xl: '-20px' }}
       >
@@ -58,15 +57,8 @@ export default function Gallery() {
           delay: 2000,
           disableOnInteraction: false,
         }}
-        navigation={{
-          prevEl: prevRef.current!, // Assert non-null
-          nextEl: nextRef.current!, // Assert non-null
-        }}
         onBeforeInit={(swiper) => {
-          console.log('🚀 ~ file: Gallery.tsx:60 ~ Gallery ~ swiper:', swiper);
-          const navigation = swiper.params.navigation as NavigationOptions;
-          navigation.prevEl = prevRef.current;
-          navigation.nextEl = nextRef.current;
+          swiperRef.current = swiper;
         }}
         modules={[Navigation, Autoplay]}
         breakpoints={breakpoints}
@@ -82,7 +74,7 @@ export default function Gallery() {
         position="absolute"
         zIndex="9"
         right={{ base: '20px', xl: '-20px' }}
-        ref={nextRef}
+        onClick={() => swiperRef.current?.slideNext()}
         cursor="pointer"
       >
         <Image w="40px" h="40px" src="/images/right.png" alt="right arrow" />
