@@ -2,7 +2,7 @@
 import { Box, HStack, Image } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { useRef } from 'react';
 
 const breakpoints = {
@@ -52,11 +52,17 @@ export default function Gallery() {
         <Image src="/images/left.png" alt="left arrow" objectFit="cover" />
       </Box>
       <Swiper
+        loop={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         navigation={{
           prevEl: prevRef.current!, // Assert non-null
           nextEl: nextRef.current!, // Assert non-null
         }}
         onInit={(swiper) => {
+          console.log('🚀 ~ file: Gallery.tsx:60 ~ Gallery ~ swiper:', swiper);
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
           // eslint-disable-next-line no-param-reassign
@@ -68,7 +74,7 @@ export default function Gallery() {
           swiper.navigation.init();
           swiper.navigation.update();
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         breakpoints={breakpoints}
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (

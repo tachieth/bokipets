@@ -31,6 +31,10 @@ body {
   margin: 0 auto;
 }
 
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 768px) {
   .video-container {
     height: 100vh;
