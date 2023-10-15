@@ -44,6 +44,7 @@ const ConnectBTN = () => {
                     color="white"
                     borderRadius="0"
                     _hover={{ bg: 'white', color: 'black' }}
+                    fontFamily="el"
                   >
                     WALLET CONNECT
                   </Button>
@@ -56,6 +57,7 @@ const ConnectBTN = () => {
                     onClick={openChainModal}
                     colorScheme="red"
                     borderRadius="0"
+                    fontFamily="el"
                   >
                     Wrong network
                   </Button>
@@ -75,13 +77,14 @@ const ConnectBTN = () => {
                     _hover={{ bg: 'white', color: 'black' }}
                     display={{ base: 'none', md: 'flex' }}
                     alignItems="center"
+                    fontFamily="el"
                   >
                     {chain.hasIcon && (
                       <Box
                         sx={{
                           background: chain.iconBackground,
-                          width: "12px",
-                          height: "12px",
+                          width: '12px',
+                          height: '12px',
                           borderRadius: 999,
                           overflow: 'hidden',
                           marginRight: 4,
@@ -91,7 +94,7 @@ const ConnectBTN = () => {
                           <Image
                             alt={chain.name ?? 'Chain icon'}
                             src={chain.iconUrl}
-                            sx={{ width: "12px", height: "12px" }}
+                            sx={{ width: '12px', height: '12px' }}
                           />
                         )}
                       </Box>
@@ -107,6 +110,7 @@ const ConnectBTN = () => {
                     color="white"
                     borderRadius="0"
                     _hover={{ bg: 'white', color: 'black' }}
+                    fontFamily="el"
                   >
                     {account.displayName}
                     {account.displayBalance ? ` (${account.displayBalance})` : ''}

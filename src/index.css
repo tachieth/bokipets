@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'El Camino';
+  src: url('/fonts/ElCaminoRegular.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
 }

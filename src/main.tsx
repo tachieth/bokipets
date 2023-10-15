@@ -20,6 +20,7 @@ const theme = extendTheme({
   fonts: {
     heading: "'Rubik Variable', sans-serif",
     body: "'Rubik Variable', sans-serif",
+    el: "El Camino"
   },
 });
 
@@ -29,7 +30,7 @@ const { chains, publicClient } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'BOKIPETS',
+  appName: 'BOKICOMPANIONS',
   projectId: import.meta.env.VITE_APP_PROJECT_ID,
   chains,
 });

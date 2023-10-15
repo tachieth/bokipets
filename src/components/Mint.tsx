@@ -46,8 +46,8 @@ export default function Mint() {
         NOTE: ONLY Boki holders are eligible up to 1 companion per Boki.
       </Text>
       <HStack>
-        <HStack borderWidth="1px" borderColor="main" w="160px" h="44px" justify="center">
-          <Text color="white">{`PETS COUNT: ${count}`}</Text>
+        <HStack borderWidth="1px" borderColor="main" w="220px" h="44px" justify="center">
+          <Text color="white" fontFamily="el">{`COMPANIONS COUNT: ${count}`}</Text>
         </HStack>
         <Button
           borderRadius="0"
