@@ -7,14 +7,14 @@ import Mint from './components/Mint';
 function App() {
   return (
     <Box minH="100vh" position="relative" pb="30px">
-      <Box className="video-container" display={{base: "none", lg: "block"}}>
-        <video className='video' autoPlay muted loop poster="/images/bg.png">
+      <Box className="video-container" display={{ base: 'none', lg: 'block' }}>
+        <video className="video" autoPlay muted loop poster="/images/bg.png">
           <source src="/images/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </Box>
-      <Box className="video-container" display={{base: "block", lg: "none"}}>
-        <video className='video' autoPlay muted loop poster="/images/bg.png">
+      <Box className="video-container" display={{ base: 'block', lg: 'none' }}>
+        <video className="video" playsInline autoPlay muted loop poster="/images/bg.png">
           <source src="/images/mobile-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
