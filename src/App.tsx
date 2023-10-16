@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 import Header from './components/Header';
 import Logo from './components/Logo';
 import Gallery from './components/Gallery';
@@ -14,10 +14,11 @@ function App() {
         </video>
       </Box>
       <Box className="video-container" display={{ base: 'block', lg: 'none' }}>
-        <video className="video" playsInline autoPlay muted loop poster="/images/bg.png">
+        <Image w="100dvw" h="100dvh" src="/images/mobile-video.gif" alt="background gif" objectFit="cover" />
+        {/* <video className="video" playsInline autoPlay muted loop poster="/images/bg.png">
           <source src="/images/mobile-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </Box>
       <Box bg="rgba(0, 0, 0, 0.25)" inset="0" position="absolute"></Box>
       <Box position="relative" zIndex="5" maxW="1280px" w="100%" mx="auto">
