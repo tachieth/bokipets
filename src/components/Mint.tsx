@@ -31,7 +31,7 @@ export default function Mint() {
   return (
     <VStack mt="15px" px="20px">
       <SimpleGrid spacing="22px" columns={{ base: 3, lg: 5 }}>
-        {Array.from({ length: 5 }, (_, i) => i + 1).map((num) => (
+        {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
           <NumBox num={num} active={count === num} onClick={() => setCount(num)} />
         ))}
       </SimpleGrid>
