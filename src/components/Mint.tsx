@@ -1,32 +1,40 @@
 import { Button, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
-import { useState } from 'react';
-import { toast } from 'react-toastify'
-import { useAccount } from 'wagmi'
-import useGetBokiBalance from '../hooks/getBokiBalance';
+import { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
+import { useAccount } from 'wagmi';
 import useGetBokiPetsDetails from '../hooks/getBokiPetsDetails';
 import useMintBokiPets from '../hooks/mintBokiPets';
+import useGetProofAndMaxMint from '../hooks/getProofAndMaxMint';
 
 export default function Mint() {
   const [count, setCount] = useState(1);
-  const {isConnected} = useAccount();
-  const { balance = 0 } = useGetBokiBalance();
+  const { isConnected } = useAccount();
   const { isLoading, limit, maxSupply, totalSupply, isPaused } = useGetBokiPetsDetails();
+  const { getProof, generateMerkleRoot } = useGetProofAndMaxMint();
   const { write, isLoading: isMinting } = useMintBokiPets();
+
+  useEffect(() => {
+    const root = generateMerkleRoot();
+    console.log("🚀 ~ file: Mint.tsx:18 ~ useEffect ~ root:", root)
+  }, [])
+  
 
   const handleMint = async () => {
     if (limit && count > limit) {
       return toast.error(`You can only mint ${limit} pets at a time`);
     }
 
-    if (balance === 0) {
-      return toast.error('You must have at least 1 BOKI to mint pets');
+    const { proof, maxMint, error } = getProof();
+
+    if (error) {
+      return toast.error('Not a Boki holder');
     }
 
     if (count && write) {
       toast.info(`Minting ${count} pets...`);
-      await write({ args: [BigInt(count)], value: BigInt(0) });
+      await write({ args: [proof, maxMint, count], value: BigInt(0) });
     }
-  }
+  };
 
   return (
     <VStack mt="15px" px="20px">

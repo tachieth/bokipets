@@ -17,12 +17,6 @@ export default defineConfig({
             [goerli.id]: process.env.VITE_APP_CONTRACT_ADDRESS! as `0x${string}`,
           },
         },
-        {
-          name: 'Boki',
-          address: {
-            [goerli.id]: process.env.VITE_APP_BOKI_CONTRACT_ADDRESS! as `0x${string}`,
-          },
-        },
       ],
     }),
     react(),

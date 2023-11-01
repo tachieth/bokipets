@@ -19,6 +19,7 @@
     "@rainbow-me/rainbowkit": "^1.1.1",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.4",
+    "merkletreejs": "^0.3.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-toastify": "^9.1.3",
