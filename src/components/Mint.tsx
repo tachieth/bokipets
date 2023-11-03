@@ -1,5 +1,5 @@
 import { Button, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useAccount } from 'wagmi';
 import useGetBokiPetsDetails from '../hooks/getBokiPetsDetails';
@@ -10,13 +10,13 @@ export default function Mint() {
   const [count, setCount] = useState(1);
   const { isConnected } = useAccount();
   const { isLoading, limit, maxSupply, totalSupply, isPaused } = useGetBokiPetsDetails();
-  const { getProof, generateMerkleRoot } = useGetProofAndMaxMint();
+  const { getProof } = useGetProofAndMaxMint();
   const { write, isLoading: isMinting } = useMintBokiPets();
 
-  useEffect(() => {
-    const root = generateMerkleRoot();
-    console.log("🚀 ~ file: Mint.tsx:18 ~ useEffect ~ root:", root)
-  }, [])
+  // useEffect(() => {
+  //   const root = generateMerkleRoot();
+  //   console.log("🚀 ~ file: Mint.tsx:18 ~ useEffect ~ root:", root)
+  // }, [])
   
 
   const handleMint = async () => {
