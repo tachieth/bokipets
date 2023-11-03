@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { goerli } from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ToastContainer } from 'react-toastify';
@@ -25,7 +25,7 @@ const theme = extendTheme({
 });
 
 const { chains, publicClient } = configureChains(
-  [goerli],
+  [mainnet],
   [alchemyProvider({ apiKey: import.meta.env.VITE_APP_ALCHEMY_KEY }), publicProvider()]
 );
 
