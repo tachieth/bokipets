@@ -9,7 +9,7 @@ export default function useGetProofAndMaxMint() {
   
   const getProof = (): { error: boolean; proof: `0x${string}`[]; maxMint: number } => {
     if (address) {
-      const found = snapshots.find((snapshot) => snapshot.address === address);
+      const found = snapshots.find((snapshot) => snapshot.address.toLowerCase() === address.toLowerCase());
       const proof = generateProof(address, found?.maxMint || 1);
 
       return {
