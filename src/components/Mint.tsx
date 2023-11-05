@@ -14,7 +14,15 @@ export default function Mint() {
   const { getProof } = useGetProofAndMaxMint();
   const { write, isLoading: isMinting } = useMintBokiPets();
   
-  const isBokiHolder = snapshots.some((snapshot) => snapshot.address === address);
+  const isBokiHolder = () => {
+    if (isConnected && address) {
+      return snapshots.some((snapshot) => {
+        return snapshot.address.toLowerCase() === address.toLowerCase();
+      });
+    }
+
+    return false;
+  }
 
   const handleMint = async () => {
     if (limit && count > limit) {
@@ -35,7 +43,7 @@ export default function Mint() {
 
   return (
     <VStack mt="15px" px="20px">
-      {isBokiHolder && (
+      {isBokiHolder() && (
         <SimpleGrid spacing="22px" columns={{ base: 3, lg: 5 }}>
           {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
             <NumBox num={num} active={count === num} onClick={() => setCount(num)} />
@@ -52,7 +60,7 @@ export default function Mint() {
       >
         NOTE: ONLY Boki holders are eligible up to 1 companion per Boki.
       </Text>
-      {isBokiHolder && (
+      {isBokiHolder() && (
         <HStack>
           <HStack borderWidth="1px" borderColor="main" w="220px" h="44px" justify="center">
             <Text color="white" fontFamily="el">{`COMPANIONS COUNT: ${count}`}</Text>
@@ -72,7 +80,7 @@ export default function Mint() {
           </Button>
         </HStack>
       )}
-      {!isBokiHolder && (
+      {!isBokiHolder() && (
         <Heading as="h5" color="white" fontSize={'xl'}>
           Not a Boki holder
         </Heading>
