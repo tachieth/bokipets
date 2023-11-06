@@ -76,7 +76,7 @@ export default function Mint() {
             isDisabled={isPaused || totalSupply === maxSupply || !isConnected}
             onClick={handleMint}
           >
-            {isPaused ? 'SALE NOT ACTIVE' : totalSupply === maxSupply ? 'SOLD OUT' : 'MINT'}
+            {isPaused ? 'MINT NOT ACTIVE' : totalSupply === maxSupply ? 'SOLD OUT' : 'MINT'}
           </Button>
         </HStack>
       )}
