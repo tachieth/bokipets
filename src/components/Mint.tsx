@@ -10,6 +10,7 @@ import useGetBokiPetsMintedIds from '../hooks/getBokiPetsMintedIds';
 export default function Mint() {
   const [count, setCount] = useState(1);
   const [tokenId, setTokenId] = useState<number>();
+  console.log("🚀 ~ file: Mint.tsx:13 ~ Mint ~ tokenId:", tokenId)
   const { isConnected } = useAccount();
   const { isLoading, limit, maxSupply, totalSupply, isPaused } = useGetBokiPetsDetails();
   const { write, isLoading: isMinting } = useMintBokiPets();
@@ -62,13 +63,21 @@ export default function Mint() {
     }
   };
 
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue = e.target.value;
+    console.log("🚀 ~ file: Mint.tsx:68 ~ handleInput ~ Number(inputValue) <= 7777:", Number(inputValue) <= 7777)
+    if (Number(inputValue) <= 7777 && Number(inputValue) >= 0) {
+      setTokenId(Number(inputValue));
+    }
+  };
+
   return (
     <VStack mt="15px" px="20px">
       <HStack mb="20px">
         <Input
-          type="number"
+          type="text"
           value={tokenId}
-          onChange={(e) => setTokenId(Number(e.target.value))}
+          onChange={handleInput}
           borderRadius="0px"
           placeholder="Check if token id is already minted"
           color="white"
