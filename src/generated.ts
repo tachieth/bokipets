@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import {
   useContractRead,
   UseContractReadConfig,
@@ -2015,7 +2014,6 @@ export function watchBokiPetsEvent<
   callback: WatchContractEventCallback<TAbi, TEventName>,
 ) {
   return watchContractEvent(
-  // @ts-ignore
     {
       abi: bokiPetsABI,
       address: bokiPetsAddress[5],

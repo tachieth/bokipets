@@ -40,6 +40,10 @@ body {
   opacity: 0.5;
 }
 
+input::placeholder {
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .video-container {
     height: 100vh;

@@ -1,4 +1,4 @@
-import { Button, HStack, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import { Button, HStack, Input, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useAccount } from 'wagmi';
@@ -9,12 +9,26 @@ import useGetBokiPetsMintedIds from '../hooks/getBokiPetsMintedIds';
 
 export default function Mint() {
   const [count, setCount] = useState(1);
+  const [tokenId, setTokenId] = useState<number>();
   const { isConnected } = useAccount();
   const { isLoading, limit, maxSupply, totalSupply, isPaused } = useGetBokiPetsDetails();
   const { write, isLoading: isMinting } = useMintBokiPets();
   const { getBokiTokenIds } = useGetBokiIds();
   const { checkIfTokensAlreadyMinted } = useGetBokiPetsMintedIds();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+
+  const checkIfMinted = async () => {
+    if (tokenId) {
+      const alreadyMinted = await checkIfTokensAlreadyMinted([tokenId.toString()]);
+      if(alreadyMinted.length > 0) {
+        toast.error('Token has already been minted');
+      } else {
+        toast.success('Token can be minted');
+      }
+    } else {
+      toast.error('Please enter a token id');
+    }
+  }
 
   const handleMint = async () => {
     if (limit && count > limit) {
@@ -30,11 +44,16 @@ export default function Mint() {
       return toast.error('Not a Boki holder');
     }
 
-    const alreadyMinted = await checkIfTokensAlreadyMinted(ids);
+    const alreadyMinted = await checkIfTokensAlreadyMinted([...ids]);
 
     const filteredIds = ids.filter((id) => !alreadyMinted.includes(id)) || ids;
 
     const finalIds = filteredIds.map((id) => Number(id));
+
+    if (finalIds.length === 0 && ids.length > 0) {
+      setLoading(false);
+      return toast.error('Tokens have already been minted');
+    }
 
     setLoading(false);
     if (count && write) {
@@ -45,6 +64,26 @@ export default function Mint() {
 
   return (
     <VStack mt="15px" px="20px">
+      <HStack mb="20px">
+        <Input
+          type="number"
+          value={tokenId}
+          onChange={(e) => setTokenId(Number(e.target.value))}
+          borderRadius="0px"
+          placeholder="Check if token id is already minted"
+          color="white"
+          w="280px"
+        />
+        <Button
+          borderRadius="0"
+          minW="90px"
+          h="44px"
+          bg="main"
+          color="white"
+          _hover={{ bg: 'main' }}
+          onClick={checkIfMinted}
+        >Check</Button>
+      </HStack>
       <SimpleGrid spacing="22px" columns={{ base: 3, lg: 5 }}>
         {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
           <NumBox num={num} active={count === num} onClick={() => setCount(num)} />
