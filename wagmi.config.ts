@@ -1,6 +1,6 @@
 import { defineConfig } from '@wagmi/cli'
 import { actions, etherscan, react } from '@wagmi/cli/plugins';
-import { goerli } from 'wagmi/chains'
+import { mainnet } from 'wagmi/chains'
 import "dotenv/config"
 
 export default defineConfig({
@@ -9,12 +9,12 @@ export default defineConfig({
   plugins: [
     etherscan({
       apiKey: process.env.ETHERSCAN_KEY!,
-      chainId: goerli.id,
+      chainId: mainnet.id,
       contracts: [
         {
           name: 'BokiPets',
           address: {
-            [goerli.id]: process.env.VITE_APP_CONTRACT_ADDRESS! as `0x${string}`,
+            [mainnet.id]: process.env.VITE_APP_CONTRACT_ADDRESS! as `0x${string}`,
           },
         },
       ],
