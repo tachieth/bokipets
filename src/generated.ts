@@ -37,7 +37,7 @@ import {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export const bokiPetsABI = [
   {
@@ -222,6 +222,13 @@ export const bokiPetsABI = [
     inputs: [],
     name: 'baseURI',
     outputs: [{ name: '', internalType: 'string', type: 'string' }],
+  },
+  {
+    stateMutability: 'view',
+    type: 'function',
+    inputs: [{ name: 'tokenId', internalType: 'uint16', type: 'uint16' }],
+    name: 'checkIfMinted',
+    outputs: [{ name: '', internalType: 'bool', type: 'bool' }],
   },
   {
     stateMutability: 'view',
@@ -473,14 +480,14 @@ export const bokiPetsABI = [
 ] as const
 
 /**
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export const bokiPetsAddress = {
-  1: '0x58B9Db79050328A3040C9162D387EF69416c00B3',
+  1: '0x9014fBa49ecE6830eFc58c001dED763663B60b80',
 } as const
 
 /**
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export const bokiPetsConfig = {
   address: bokiPetsAddress,
@@ -494,7 +501,7 @@ export const bokiPetsConfig = {
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsRead<
   TFunctionName extends string,
@@ -515,7 +522,7 @@ export function useBokiPetsRead<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"LIMIT"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsLimit<
   TFunctionName extends 'LIMIT',
@@ -537,7 +544,7 @@ export function useBokiPetsLimit<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"MARKETING_RESERVE"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsMarketingReserve<
   TFunctionName extends 'MARKETING_RESERVE',
@@ -559,7 +566,7 @@ export function useBokiPetsMarketingReserve<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"SUPPLY"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSupply<
   TFunctionName extends 'SUPPLY',
@@ -581,7 +588,7 @@ export function useBokiPetsSupply<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"balanceOf"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsBalanceOf<
   TFunctionName extends 'balanceOf',
@@ -603,7 +610,7 @@ export function useBokiPetsBalanceOf<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"baseExtension"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsBaseExtension<
   TFunctionName extends 'baseExtension',
@@ -625,7 +632,7 @@ export function useBokiPetsBaseExtension<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"baseURI"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsBaseUri<
   TFunctionName extends 'baseURI',
@@ -645,9 +652,31 @@ export function useBokiPetsBaseUri<
 }
 
 /**
+ * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"checkIfMinted"`.
+ *
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
+ */
+export function useBokiPetsCheckIfMinted<
+  TFunctionName extends 'checkIfMinted',
+  TSelectData = ReadContractResult<typeof bokiPetsABI, TFunctionName>,
+>(
+  config: Omit<
+    UseContractReadConfig<typeof bokiPetsABI, TFunctionName, TSelectData>,
+    'abi' | 'address' | 'functionName'
+  > & { chainId?: keyof typeof bokiPetsAddress } = {} as any,
+) {
+  return useContractRead({
+    abi: bokiPetsABI,
+    address: bokiPetsAddress[1],
+    functionName: 'checkIfMinted',
+    ...config,
+  } as UseContractReadConfig<typeof bokiPetsABI, TFunctionName, TSelectData>)
+}
+
+/**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"getApproved"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsGetApproved<
   TFunctionName extends 'getApproved',
@@ -669,7 +698,7 @@ export function useBokiPetsGetApproved<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"getOwnershipData"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsGetOwnershipData<
   TFunctionName extends 'getOwnershipData',
@@ -691,7 +720,7 @@ export function useBokiPetsGetOwnershipData<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"isApprovedForAll"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsIsApprovedForAll<
   TFunctionName extends 'isApprovedForAll',
@@ -713,7 +742,7 @@ export function useBokiPetsIsApprovedForAll<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"name"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsName<
   TFunctionName extends 'name',
@@ -735,7 +764,7 @@ export function useBokiPetsName<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"owner"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsOwner<
   TFunctionName extends 'owner',
@@ -757,7 +786,7 @@ export function useBokiPetsOwner<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"ownerOf"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsOwnerOf<
   TFunctionName extends 'ownerOf',
@@ -779,7 +808,7 @@ export function useBokiPetsOwnerOf<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"revealed"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsRevealed<
   TFunctionName extends 'revealed',
@@ -801,7 +830,7 @@ export function useBokiPetsRevealed<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"royaltyInfo"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsRoyaltyInfo<
   TFunctionName extends 'royaltyInfo',
@@ -823,7 +852,7 @@ export function useBokiPetsRoyaltyInfo<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"saleConfig"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSaleConfig<
   TFunctionName extends 'saleConfig',
@@ -845,7 +874,7 @@ export function useBokiPetsSaleConfig<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"supportsInterface"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSupportsInterface<
   TFunctionName extends 'supportsInterface',
@@ -867,7 +896,7 @@ export function useBokiPetsSupportsInterface<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"symbol"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSymbol<
   TFunctionName extends 'symbol',
@@ -889,7 +918,7 @@ export function useBokiPetsSymbol<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"tokenURI"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsTokenUri<
   TFunctionName extends 'tokenURI',
@@ -911,7 +940,7 @@ export function useBokiPetsTokenUri<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"totalSupply"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsTotalSupply<
   TFunctionName extends 'totalSupply',
@@ -933,7 +962,7 @@ export function useBokiPetsTotalSupply<
 /**
  * Wraps __{@link useContractRead}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"unRevealedURI"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsUnRevealedUri<
   TFunctionName extends 'unRevealedURI',
@@ -955,7 +984,7 @@ export function useBokiPetsUnRevealedUri<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsWrite<
   TFunctionName extends string,
@@ -987,7 +1016,7 @@ export function useBokiPetsWrite<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"adminMint"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsAdminMint<
   TMode extends WriteContractMode = undefined,
@@ -1020,7 +1049,7 @@ export function useBokiPetsAdminMint<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"approve"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsApprove<
   TMode extends WriteContractMode = undefined,
@@ -1053,7 +1082,7 @@ export function useBokiPetsApprove<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"mint"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsMint<
   TMode extends WriteContractMode = undefined,
@@ -1086,7 +1115,7 @@ export function useBokiPetsMint<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"renounceOwnership"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsRenounceOwnership<
   TMode extends WriteContractMode = undefined,
@@ -1123,7 +1152,7 @@ export function useBokiPetsRenounceOwnership<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"reveal"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsReveal<
   TMode extends WriteContractMode = undefined,
@@ -1156,7 +1185,7 @@ export function useBokiPetsReveal<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"safeTransferFrom"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSafeTransferFrom<
   TMode extends WriteContractMode = undefined,
@@ -1193,7 +1222,7 @@ export function useBokiPetsSafeTransferFrom<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setApprovalForAll"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSetApprovalForAll<
   TMode extends WriteContractMode = undefined,
@@ -1230,7 +1259,7 @@ export function useBokiPetsSetApprovalForAll<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setBaseURI"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSetBaseUri<
   TMode extends WriteContractMode = undefined,
@@ -1263,7 +1292,7 @@ export function useBokiPetsSetBaseUri<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setRoyalty"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSetRoyalty<
   TMode extends WriteContractMode = undefined,
@@ -1296,7 +1325,7 @@ export function useBokiPetsSetRoyalty<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setSaleConfig"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSetSaleConfig<
   TMode extends WriteContractMode = undefined,
@@ -1333,7 +1362,7 @@ export function useBokiPetsSetSaleConfig<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setUnRevealedUri"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsSetUnRevealedUri<
   TMode extends WriteContractMode = undefined,
@@ -1370,7 +1399,7 @@ export function useBokiPetsSetUnRevealedUri<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"transferFrom"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsTransferFrom<
   TMode extends WriteContractMode = undefined,
@@ -1407,7 +1436,7 @@ export function useBokiPetsTransferFrom<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"transferOwnership"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsTransferOwnership<
   TMode extends WriteContractMode = undefined,
@@ -1444,7 +1473,7 @@ export function useBokiPetsTransferOwnership<
 /**
  * Wraps __{@link useContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"withdraw"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsWithdraw<
   TMode extends WriteContractMode = undefined,
@@ -1477,7 +1506,7 @@ export function useBokiPetsWithdraw<
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsWrite<TFunctionName extends string>(
   config: Omit<
@@ -1495,7 +1524,7 @@ export function usePrepareBokiPetsWrite<TFunctionName extends string>(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"adminMint"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsAdminMint(
   config: Omit<
@@ -1514,7 +1543,7 @@ export function usePrepareBokiPetsAdminMint(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"approve"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsApprove(
   config: Omit<
@@ -1533,7 +1562,7 @@ export function usePrepareBokiPetsApprove(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"mint"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsMint(
   config: Omit<
@@ -1552,7 +1581,7 @@ export function usePrepareBokiPetsMint(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"renounceOwnership"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsRenounceOwnership(
   config: Omit<
@@ -1571,7 +1600,7 @@ export function usePrepareBokiPetsRenounceOwnership(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"reveal"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsReveal(
   config: Omit<
@@ -1590,7 +1619,7 @@ export function usePrepareBokiPetsReveal(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"safeTransferFrom"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSafeTransferFrom(
   config: Omit<
@@ -1609,7 +1638,7 @@ export function usePrepareBokiPetsSafeTransferFrom(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setApprovalForAll"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSetApprovalForAll(
   config: Omit<
@@ -1628,7 +1657,7 @@ export function usePrepareBokiPetsSetApprovalForAll(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setBaseURI"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSetBaseUri(
   config: Omit<
@@ -1647,7 +1676,7 @@ export function usePrepareBokiPetsSetBaseUri(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setRoyalty"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSetRoyalty(
   config: Omit<
@@ -1666,7 +1695,7 @@ export function usePrepareBokiPetsSetRoyalty(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setSaleConfig"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSetSaleConfig(
   config: Omit<
@@ -1685,7 +1714,7 @@ export function usePrepareBokiPetsSetSaleConfig(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"setUnRevealedUri"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsSetUnRevealedUri(
   config: Omit<
@@ -1704,7 +1733,7 @@ export function usePrepareBokiPetsSetUnRevealedUri(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"transferFrom"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsTransferFrom(
   config: Omit<
@@ -1723,7 +1752,7 @@ export function usePrepareBokiPetsTransferFrom(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"transferOwnership"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsTransferOwnership(
   config: Omit<
@@ -1742,7 +1771,7 @@ export function usePrepareBokiPetsTransferOwnership(
 /**
  * Wraps __{@link usePrepareContractWrite}__ with `abi` set to __{@link bokiPetsABI}__ and `functionName` set to `"withdraw"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function usePrepareBokiPetsWithdraw(
   config: Omit<
@@ -1761,7 +1790,7 @@ export function usePrepareBokiPetsWithdraw(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsEvent<TEventName extends string>(
   config: Omit<
@@ -1779,7 +1808,7 @@ export function useBokiPetsEvent<TEventName extends string>(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__ and `eventName` set to `"Approval"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsApprovalEvent(
   config: Omit<
@@ -1798,7 +1827,7 @@ export function useBokiPetsApprovalEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__ and `eventName` set to `"ApprovalForAll"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsApprovalForAllEvent(
   config: Omit<
@@ -1817,7 +1846,7 @@ export function useBokiPetsApprovalForAllEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__ and `eventName` set to `"ConsecutiveTransfer"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsConsecutiveTransferEvent(
   config: Omit<
@@ -1836,7 +1865,7 @@ export function useBokiPetsConsecutiveTransferEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__ and `eventName` set to `"OwnershipTransferred"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsOwnershipTransferredEvent(
   config: Omit<
@@ -1855,7 +1884,7 @@ export function useBokiPetsOwnershipTransferredEvent(
 /**
  * Wraps __{@link useContractEvent}__ with `abi` set to __{@link bokiPetsABI}__ and `eventName` set to `"Transfer"`.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function useBokiPetsTransferEvent(
   config: Omit<
@@ -1878,7 +1907,7 @@ export function useBokiPetsTransferEvent(
 /**
  * Wraps __{@link getContract}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function getBokiPets(
   config: Omit<GetContractArgs, 'abi' | 'address'> & {
@@ -1895,7 +1924,7 @@ export function getBokiPets(
 /**
  * Wraps __{@link readContract}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function readBokiPets<
   TAbi extends readonly unknown[] = typeof bokiPetsABI,
@@ -1915,7 +1944,7 @@ export function readBokiPets<
 /**
  * Wraps __{@link writeContract}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function writeBokiPets<
   TFunctionName extends string,
@@ -1952,7 +1981,7 @@ export function writeBokiPets<
 /**
  * Wraps __{@link prepareWriteContract}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function prepareWriteBokiPets<
   TAbi extends readonly unknown[] = typeof bokiPetsABI,
@@ -1973,7 +2002,7 @@ export function prepareWriteBokiPets<
 /**
  * Wraps __{@link watchContractEvent}__ with `abi` set to __{@link bokiPetsABI}__.
  *
- * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x58B9Db79050328A3040C9162D387EF69416c00B3)
+ * [__View Contract on Ethereum Etherscan__](https://etherscan.io/address/0x9014fBa49ecE6830eFc58c001dED763663B60b80)
  */
 export function watchBokiPetsEvent<
   TAbi extends readonly unknown[] = typeof bokiPetsABI,
