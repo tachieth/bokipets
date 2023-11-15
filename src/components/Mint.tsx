@@ -10,7 +10,6 @@ import useGetBokiPetsMintedIds from '../hooks/getBokiPetsMintedIds';
 export default function Mint() {
   const [count, setCount] = useState(1);
   const [tokenId, setTokenId] = useState<number>();
-  console.log("🚀 ~ file: Mint.tsx:13 ~ Mint ~ tokenId:", tokenId)
   const { isConnected } = useAccount();
   const { isLoading, limit, maxSupply, totalSupply, isPaused } = useGetBokiPetsDetails();
   const { write, isLoading: isMinting } = useMintBokiPets();
@@ -33,10 +32,11 @@ export default function Mint() {
 
   const handleMint = async () => {
     if (limit && count > limit) {
-      return toast.error(`You can only mint ${limit} pets at a time`);
+      return toast.error(`You can only mint ${limit} companions at a time`);
     }
 
     setLoading(true);
+    toast.info(`Please wait while we check the ids..`);
 
     const ids = await getBokiTokenIds();
 
@@ -58,14 +58,13 @@ export default function Mint() {
 
     setLoading(false);
     if (count && write) {
-      toast.info(`Minting ${count} pets...`);
+      toast.info(`Minting ${count} companions...`);
       await write({ args: [count, finalIds, ids.length], value: BigInt(0) });
     }
   };
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
-    console.log("🚀 ~ file: Mint.tsx:68 ~ handleInput ~ Number(inputValue) <= 7777:", Number(inputValue) <= 7777)
     if (Number(inputValue) <= 7777 && Number(inputValue) >= 0) {
       setTokenId(Number(inputValue));
     }
